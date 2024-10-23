@@ -30,17 +30,21 @@ func print(level loglevel.LogLevel, format string, a ...any) (int, error) {
 	return fmt.Printf("%s | %-5s | %v | %s\n", level_prefix, level, time_formated, msg)
 }
 
-func Debug(format string, a ...any) (int, error) {
-	return print(loglevel.DEBUG, format, a...)
+func Debug(format string, a ...any) int {
+	n, _ := print(loglevel.DEBUG, format, a...)
+	return n
 }
-func Info(format string, a ...any) (int, error) {
+func Info(format string, a ...any) int {
 
-	return print(loglevel.INFO, format, a...)
+	n, _ := print(loglevel.INFO, format, a...)
+	return n
 }
-func Warn(format string, a ...any) (int, error) {
-	return print(loglevel.WARN, format, a...)
+func Warn(format string, a ...any) int {
+	n, _ := print(loglevel.WARN, format, a...)
+	return n
 }
-func Error(format string, a ...any) (int, error) {
+func Error(format string, a ...any) int {
 
-	return print(loglevel.ERROR, format, a...)
+	n, _ := print(loglevel.ERROR, format, a...)
+	return n
 }
