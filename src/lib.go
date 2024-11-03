@@ -50,7 +50,13 @@ func Error(format string, a ...any) int {
 	return n
 }
 
-func Fatal(format string, a ...any) {
-	Error(format, a...)
+func Fatal(a ...any) {
+	if len(a) == 1 {
+		Error("%s", a...)
+	} else {
+		if str, ok := a[0].(string); ok {
+			Error(str, a[1:]...)
+		}
+	}
 	os.Exit(1)
 }

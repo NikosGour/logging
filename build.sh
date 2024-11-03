@@ -1,2 +1,2 @@
 #!/bin/env bash
-go build -o out/logging src/main.go
+go build -o out/logging main.go

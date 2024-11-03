@@ -13,8 +13,11 @@ func main() {
 
 	x := 10
 	log.Debug("This is a Debug: %d", x)
-	log.Info("This is a Info: %v", x)
-	log.Warn("This is a Warn: %v", x)
-	log.Error("This is a Error: %v", x)
+	log.Info("This is a Info: %d", x)
+	log.Warn("This is a Warn: %d", x)
+	log.Error("This is a Error: %d", x)
+
+	// log.Fatal(fmt.Errorf("Me lene niko"))
+	log.Fatal("This is a Fatal: %d", x)
 
 }
