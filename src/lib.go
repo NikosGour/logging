@@ -2,6 +2,7 @@ package logging
 
 import (
 	"fmt"
+	"os"
 	"time"
 
 	loglevel "github.com/NikosGour/logging/src/LogLevel"
@@ -47,4 +48,9 @@ func Error(format string, a ...any) int {
 
 	n, _ := print(loglevel.ERROR, format, a...)
 	return n
+}
+
+func Fatal(format string, a ...any) {
+	Error(format, a...)
+	os.Exit(1)
 }
