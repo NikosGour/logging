@@ -9,7 +9,17 @@ import (
 	"gitlab.com/metakeule/fmtdate"
 )
 
+var _LOGLEVEL loglevel.LogLevel = loglevel.DEBUG
+
+func SetLogLevel(level loglevel.LogLevel) {
+	_LOGLEVEL = level
+}
+
 func print(level loglevel.LogLevel, format string, a ...any) (int, error) {
+	if _LOGLEVEL > level {
+		return 0, nil
+	}
+
 	msg := fmt.Sprintf(format, a...)
 	var level_prefix string
 	switch level {
