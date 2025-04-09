@@ -11,10 +11,8 @@ func main() {
 	fmt.Println(loglevel.DEBUG, loglevel.INFO, loglevel.WARN, loglevel.ERROR)
 	fmt.Println(loglevel.DEBUG.EnumIndex(), loglevel.INFO.EnumIndex(), loglevel.WARN.EnumIndex(), loglevel.ERROR.EnumIndex())
 
-	log.SetLogLevel(loglevel.WARN)
 	x := 10
 	log.Debug("This is a Debug: %d", x)
-	log.SetLogLevel(loglevel.INFO)
 	log.Info("This is a Info: %d", x)
 	log.Warn("This is a Warn: %d", x)
 	log.Error("This is a Error: %d", x)

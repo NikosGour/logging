@@ -7,10 +7,11 @@ const (
 	INFO
 	WARN
 	ERROR
+	FATAL
 )
 
 func (level LogLevel) String() string {
-	return [...]string{"DEBUG", "INFO", "WARN", "ERROR"}[level]
+	return [...]string{"DEBUG", "INFO", "WARN", "ERROR", "FATAL"}[level]
 }
 
 func (level LogLevel) EnumIndex() uint {
