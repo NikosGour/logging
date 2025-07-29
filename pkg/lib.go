@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"time"
 
-	loglevel "github.com/NikosGour/logging/internal/LogLevel"
+	loglevel "github.com/NikosGour/logging/pkg/LogLevel"
 	"gitlab.com/metakeule/fmtdate"
 )
 

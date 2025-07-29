@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	log "github.com/NikosGour/logging/internal"
-	loglevel "github.com/NikosGour/logging/internal/LogLevel"
+	log "github.com/NikosGour/logging/pkg"
+	loglevel "github.com/NikosGour/logging/pkg/LogLevel"
 )
 
 func main() {
