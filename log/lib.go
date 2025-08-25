@@ -1,4 +1,4 @@
-package logging
+package log
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"time"
 
-	loglevel "github.com/NikosGour/logging/pkg/LogLevel"
+	loglevel "github.com/NikosGour/logging/log/LogLevel"
 	"gitlab.com/metakeule/fmtdate"
 )
 
