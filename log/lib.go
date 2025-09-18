@@ -13,6 +13,14 @@ import (
 
 var LOGLEVEL loglevel.LogLevel = loglevel.DEBUG
 
+func SetAndReset(level loglevel.LogLevel) func() {
+	temp_level := LOGLEVEL
+	LOGLEVEL = level
+	return func() {
+		LOGLEVEL = temp_level
+	}
+}
+
 func print(level loglevel.LogLevel, format string, a ...any) (int, error) {
 	if LOGLEVEL > level {
 		return 0, nil
