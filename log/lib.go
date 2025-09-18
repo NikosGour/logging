@@ -11,14 +11,10 @@ import (
 	"gitlab.com/metakeule/fmtdate"
 )
 
-var _LOGLEVEL loglevel.LogLevel = loglevel.DEBUG
-
-func SetLogLevel(level loglevel.LogLevel) {
-	_LOGLEVEL = level
-}
+var LOGLEVEL loglevel.LogLevel = loglevel.DEBUG
 
 func print(level loglevel.LogLevel, format string, a ...any) (int, error) {
-	if _LOGLEVEL > level {
+	if LOGLEVEL > level {
 		return 0, nil
 	}
 
